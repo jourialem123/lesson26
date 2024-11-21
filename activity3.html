@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity3</title>
+</head>
+<body>
+    <h2>Static methods in class</h2>
+    <p id="p1"> </p>
+    <p id="p2"></p>
+    <p id="p3"></p>
+    <script>
+        //parent class
+        class student {
+            constructor(name) {
+                this.name = name;}
+static hello(){
+    return " Helloooooo!!!! ";
+}
+static hi(a){
+    return "HI " +a.name;
+
+}
+static welcome(){
+    return "welcome........."+st1.name;
+}
+}
+st1= new student("Bella");
+document.getElementById("p1").innerHTML=student.hello();
+document.getElementById("p2").innerHTML=student.welcome();
+document.getElementById("p3").innerHTML=student.hi(st1);
+</script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>activity2</title>
+</head>
+<body>
+    <h2>Class inheritance</h2>
+    <p id="p1"> </p>
+    <p id="p2"></p>
+    <script>
+        //parent class
+        class student {
+            constructor(name, year) {
+                this.name = name;
+                this.year = year;
+            }
+            //dont need to use the word display or show, any word will work
+            display() {
+                let date = new Date();
+                return "Name of student is " + this.name + " and age is " + (date.getFullYear() - this.year);
+            }
+
+        }
+        
+        //child class
+
+        class studentcolor extends student{
+            constructor(name,year,favcolor){
+                super(name,year);
+                this.favcolor=favcolor;
+            }
+            show(){
+                return this.display()+" Favourite color is "+this.favcolor;
+            }
+        }
+        st1=new studentcolor("Ali",2011,"Red");
+        st2=new studentcolor("Bushra",2000,"Blue");
+        document.getElementById("p1").innerHTML=st1.show();
+        document.getElementById("p2").innerHTML=st1.name+ st1.year;
+        document
+    </script>
+</body>
+</html>
